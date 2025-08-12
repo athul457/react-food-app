@@ -11,8 +11,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,7 +21,7 @@ body {
 
 .nav-items ul {
   display: flex;
-  align-items: center; /* Ensure vertical alignment */
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,20 +31,20 @@ body {
 .nav-items ul li {
   margin-left: 20px;
   display: flex;
-  align-items: center; /* Align text and icon */
+  align-items: center;
 }
 
 .nav-items ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
+  /* font-size: 18px; */
   padding: 8px 12px;
   transition: all 0.3s ease;
 }
 
 .nav-items ul li a:hover {
   color: #ffffff;
-  background-color: #007bff;
+  background-color: orange;
   border-radius: 5px;
 }
 
@@ -143,4 +141,13 @@ body {
 .logout-button:hover,
 .login-button:hover {
   background-color: #0056b3;
+}
+
+/* In index.css or a global stylesheet */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

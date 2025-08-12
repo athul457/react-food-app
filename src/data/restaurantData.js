@@ -6,6 +6,7 @@ const restaurantData = [
     rating: "4.5",
     eta: "27 mins",
     image: "/images/Food-Images/restaurant1.jpg",
+    price: 100,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const restaurantData = [
     rating: "4.3",
     eta: "22 mins",
     image: "/images/Food-Images/restaurant2.jpg",
+    price: 100,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const restaurantData = [
     rating: "4.7",
     eta: "18 mins",
     image: "/images/Food-Images/restaurant3.jpg",
+    price: 100,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const restaurantData = [
     rating: "4.4",
     eta: "20 mins",
     image: "/images/Food-Images/restaurant4.jpg",
+    price: 100,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const restaurantData = [
     rating: "4.8",
     eta: "25 mins",
     image: "/images/Food-Images/restaurant5.jpg",
+    price: 100,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const restaurantData = [
     rating: "4.5",
     eta: "30 mins",
     image: "/images/Food-Images/restaurant6.jpg",
+    price: 100,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const restaurantData = [
     rating: "4.2",
     eta: "24 mins",
     image: "/images/Food-Images/restaurant7.jpg",
+    price: 100,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const restaurantData = [
     rating: "4.0",
     eta: "15 mins",
     image: "/images/Food-Images/restaurant8.jpg",
+    price: 100,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const restaurantData = [
     rating: "4.1",
     eta: "19 mins",
     image: "/images/Food-Images/restaurant9.jpg",
+    price: 100,
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ const restaurantData = [
     rating: "4.6",
     eta: "28 mins",
     image: "/images/Food-Images/restaurant10.jpg",
+    price: 100,
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ const restaurantData = [
     rating: "4.4",
     eta: "26 mins",
     image: "/images/Food-Images/restaurant11.jpg",
+    price: 100,
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ const restaurantData = [
     rating: "4.7",
     eta: "23 mins",
     image: "/images/Food-Images/restaurant12.jpg",
+    price: 100,
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ const restaurantData = [
     rating: "4.5",
     eta: "21 mins",
     image: "/images/Food-Images/restaurant13.jpg",
+    price: 100,
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ const restaurantData = [
     rating: "4.3",
     eta: "20 mins",
     image: "/images/Food-Images/restaurant14.jpg",
+    price: 100,
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ const restaurantData = [
     rating: "4.2",
     eta: "16 mins",
     image: "/images/Food-Images/restaurant15.jpg",
+    price: 100,
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ const restaurantData = [
     rating: "4.6",
     eta: "25 mins",
     image: "/images/Food-Images/restaurant16.jpg",
+    price: 100,
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ const restaurantData = [
     rating: "4.4",
     eta: "29 mins",
     image: "/images/Food-Images/restaurant17.jpg",
+    price: 100,
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ const restaurantData = [
     rating: "4.5",
     eta: "27 mins",
     image: "/images/Food-Images/restaurant18.jpg",
+    price: 100,
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ const restaurantData = [
     rating: "4.8",
     eta: "22 mins",
     image: "/images/Food-Images/restaurant19.jpg",
+    price: 100,
   },
   {
     id: 20,
@@ -158,6 +177,7 @@ const restaurantData = [
     rating: "4.6",
     eta: "30 mins",
     image: "/images/Food-Images/restaurant20.jpg",
+    price: 100,
   },
 ];
 

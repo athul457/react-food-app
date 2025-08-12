@@ -45,7 +45,7 @@ export default function Login() {
 
         <button
           type="submit"
-          className="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600"
+          className="w-full bg-orange-400 text-white p-3 rounded-lg hover:bg-orange-600"
         >
           Login
         </button>
@@ -54,7 +54,8 @@ export default function Login() {
           className="mt-4 text-blue-500 cursor-pointer text-center"
           onClick={() => navigate("/register")}
         >
-          Don’t have an account? Register
+          Don’t have an account?{" "}
+          <span className="text-orange-600">Register</span>
         </p>
       </form>
     </div>

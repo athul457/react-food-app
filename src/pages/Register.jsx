@@ -25,7 +25,7 @@ export default function Register() {
         <input
           type="text"
           placeholder="name"
-          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -34,7 +34,7 @@ export default function Register() {
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -43,7 +43,7 @@ export default function Register() {
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-3 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -51,7 +51,7 @@ export default function Register() {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600"
+          className="w-full bg-orange-400 text-white p-3 rounded-lg hover:bg-orange-600"
         >
           Register
         </button>
@@ -60,7 +60,8 @@ export default function Register() {
           className="mt-4 text-blue-500 cursor-pointer text-center"
           onClick={() => navigate("/login")}
         >
-          Already have an account? Login
+          Already have an account?{" "}
+          <span className="text-orange-600">Login</span>
         </p>
       </form>
     </div>

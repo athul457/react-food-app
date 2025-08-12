@@ -19,7 +19,7 @@ function App() {
     setHideFooter(!hidePaths.includes(location.pathname));
   }, [location]);
   return (
-    <div className="w-full m-0 p-0">
+    <div className="w-full m-0 p-0 bg-orange-50 overflow-hidden box-border">
       <Header />
       <main>
         <Routes>
