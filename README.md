@@ -66,15 +66,19 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
    cd food-app
    ```
 2.Install dependencies
-```npm install
+
+```
+npm install
 ```
 3.Run the development server
 
-```npm run dev
+```
+npm run dev
 ```
 4.Build for production
 
-```npm run build
+```
+npm run build
 ```
 💡 Challenges Faced
 Efficiently managing favorites with Context API.
