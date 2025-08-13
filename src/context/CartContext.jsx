@@ -21,7 +21,6 @@ export default function CartProvider({ children }) {
         return [...prevCart, { ...data, quantity: 1 }];
       }
     });
-    alert("item added successfully");
   }
 
   function increaseQuantity(id) {

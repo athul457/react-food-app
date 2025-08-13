@@ -18,7 +18,7 @@ export default function Home() {
         {filterData.map((data) => (
           <div
             key={data.id}
-            className="mr-2 ml-2 rounded-lg shadow-md shadow-gray-600"
+            className="mr-2 ml-2 rounded-lg shadow-md shadow-orange-600"
           >
             <List data={data} />
           </div>
@@ -37,17 +37,16 @@ function List({ data }) {
         <img
           src={data.image}
           alt={data.resName}
-          className="w-full h-full object-cover rounded-md "
+          className="w-full h-full object-cover rounded-md hover:opacity-80"
         />
       </div>
       <div className="ml-7 relative">
         <h1 className="text-lg font-bold">{data.resName}</h1>
         <h1 className="italic">{data.cuisine}</h1>
-        <h1>Rating: {data.rating}</h1>
-        <h1 className="absolute right-8 bottom-3 bg-orange-500 p-2 rounded-lg text-white">
+        <h1 className="mb-1">Rating: {data.rating}</h1>
+        <h1 className="absolute right-5 bottom-3 bg-orange-500 p-2 rounded-lg text-white">
           {data.eta}
         </h1>
-        <h1>{data.price}</h1>
       </div>
 
       <button
@@ -55,7 +54,7 @@ function List({ data }) {
         onClick={() => onAddToCart(data)}
       >
         <i
-          className={`fa-regular fa-heart ${isInCart ? "text-red-600" : "text-black"}`}
+          class={`fa-solid fa-heart ${isInCart ? "text-red-600" : "text-white"}`}
         ></i>
       </button>
     </div>

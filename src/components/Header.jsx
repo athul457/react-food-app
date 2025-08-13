@@ -6,7 +6,7 @@ import { UseCart } from "../context/CartContext";
 export default function Header() {
   const { cart } = UseCart();
   return (
-    <div className="header bg-white p-5 shadow-md shadow-gray-600">
+    <div className="header bg-gray-100 p-5 shadow-md shadow-gray-600">
       <div className="w-[30px] h-[30px]">
         <img src={logo} alt="logo image" />
       </div>
@@ -29,10 +29,10 @@ export default function Header() {
             <Link to="/register">register</Link>
           </li> */}
 
-          <li className="relative text-2xl ">
+          <li className="relative  ">
             <Link to="/cart">
-              <i class="fa-solid fa-cart-shopping">
-                <span className="absolute bottom-6 right-4 text-red-600 text-lg  rounded-4xl w-[20px] h-[20px] bg-white flex items-center justify-center">
+              <i className="fa-solid fa-cart-shopping text-2xl">
+                <span className="absolute bottom-6 right-4 text-[10px] text-red-600  rounded-4xl w-[20px] h-[20px] bg-white flex items-center justify-center">
                   {cart.length}
                 </span>
               </i>
