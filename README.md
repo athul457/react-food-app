@@ -36,7 +36,7 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 - **CSS3**
 - **Context API**
 - **React Router**
-- **Tailwind CSS** (if used)
+- **Tailwind CSS** 
 
 ---
 
