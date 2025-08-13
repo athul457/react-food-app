@@ -7,12 +7,14 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 ---
 
 ## 🚀 Live Demo
-[🔗 View App](https://yumyumgooo.netlify.app/))  
+
+[🔗 View App](https://yumyumgooo.netlify.app/)
 [💻 GitHub Repository](https://github.com/athul457/react-food-app)
 
 ---
 
 ## 📸 Preview
+
 ![App Preview](https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
 ---
@@ -36,7 +38,7 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 - **CSS3**
 - **Context API**
 - **React Router**
-- **Tailwind CSS** 
+- **Tailwind CSS**
 
 ---
 
@@ -55,7 +57,6 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 ┗ README.md
 ```
 
-
 ---
 
 ## ⚙️ Installation & Setup
@@ -65,21 +66,24 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
    git clone https://github.com/athul457/react-food-app.git
    cd food-app
    ```
-2.Install dependencies
+   2.Install dependencies
 
 ```bash
 npm install
 ```
+
 3.Run the development server
 
 ```bash
 npm run dev
 ```
+
 4.Build for production
 
 ```bash
 npm run build
 ```
+
 ## 💡 Challenges Faced
 
 - Efficiently managing favorites with Context API.
