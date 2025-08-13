@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "/images/foo-app-logo.jpg";
+import logo from "/images/logo2.png";
 import SearchItems from "../pages/SearchItem";
 import { UseCart } from "../context/CartContext";
 
@@ -7,8 +7,8 @@ export default function Header() {
   const { cart } = UseCart();
   return (
     <div className="header bg-gray-100 p-5 shadow-md shadow-gray-600">
-      <div className="w-[30px] h-[30px]">
-        <img src={logo} alt="logo image" />
+      <div className="w-[50px] h-[50px]">
+        <img src={logo} alt="logo image" className="rounded-4xl" />
       </div>
       <SearchItems />
       <nav className="nav-items ">

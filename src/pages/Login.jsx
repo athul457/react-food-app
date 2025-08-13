@@ -18,7 +18,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center w-full h-screen bg-[url('/images/login3.jpg')] bg-cover bg-center">
       <form
         onSubmit={handleLogin}
         className="bg-white p-8 rounded-lg shadow-lg w-96"

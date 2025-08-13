@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { UseCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const { cart, removeItem, decreaseQuantity, increaseQuantity, totalPrice } =
@@ -22,18 +23,29 @@ export default function Cart() {
     ((offerPrice - totalPrice) / offerPrice) * 100
   );
 
+  const navigate = useNavigate();
+  function backToHome(e) {
+    e.preventDefault();
+    navigate("/");
+  }
+
   if (cart.length === 0) {
     return (
       <div className="bg-[url('/images/cartCover.jpg')] bg-cover bg-center w-full h-screen flex items-center justify-center">
         <div className="bg-gray-300 p-20 rounded-lg">
-          <h2 className="text-2xl font-bold">your cart is empty</h2>
-          <h2 className="ml-3">add something to the cart</h2>
+          <h2 className="text-2xl font-bold ml-10">your cart is empty</h2>
+          <h2 className="ml-13">add something to the cart</h2>
+          <button
+            className="w-[300px] p-2 bg-orange-500 rounded-lg mt-5 hover:bg-orange-400 font-bold"
+            onClick={backToHome}
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
     );
   }
 
-  // gap-3.5 grid grid-cols-4 justify-center p-2
   return (
     <>
       <div className="bg-[url('/images/cartCover.jpg')] bg-cover bg-center w-full min-h-screen  flex items-center justify-center">
@@ -55,7 +67,7 @@ export default function Cart() {
                 <h1 className="text-lg font-bold mt-8">{data.resName}</h1>
                 <h1 className="italic">{data.cuisine}</h1>
                 <h1 className="mb-1">Rating: {data.rating}</h1>
-                <h1 className="mb-1">Price: {data.price}</h1>
+                <h1 className="mb-1">Price ₹: {data.price}</h1>
                 <h1 className="mb-1">Quantity: {data.quantity}</h1>
                 <h1 className="absolute right-1 bottom-5 bg-orange-500 p-2 rounded-lg text-white">
                   {data.eta}
