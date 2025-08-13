@@ -7,7 +7,7 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 ---
 
 ## 🚀 Live Demo
-[🔗 View App]([https://.netlify.app/](https://yumyumgooo.netlify.app/))  
+[🔗 View App](https://yumyumgooo.netlify.app/))  
 [💻 GitHub Repository](https://github.com/athul457/food-app)
 
 ---
