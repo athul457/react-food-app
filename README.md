@@ -1,6 +1,6 @@
 # 🍔 Food Delivery App (Frontend)
 
-A modern **React** food delivery web application with a sleek and responsive UI.  
+A modern **React** food delivery web application .  
 Users can browse delicious foods, search for specific dishes, manage their favorite list, and apply discount coupons for savings.  
 Built using **React**, **Vite**, **Context API**, and **React Router**.
 
