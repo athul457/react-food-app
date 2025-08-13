@@ -80,14 +80,14 @@ npm run dev
 ```bash
 npm run build
 ```
-💡 Challenges Faced
+## 💡 Challenges Faced
 Efficiently managing favorites with Context API.
 
 Implementing coupon logic with validation.
 
 Ensuring fast and responsive search results.
 
-📜 License
+## 📜 License
 **This project is licensed under the MIT License.**
 
 🙌 Acknowledgements
