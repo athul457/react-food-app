@@ -81,16 +81,16 @@ npm run dev
 npm run build
 ```
 ## 💡 Challenges Faced
+
 Efficiently managing favorites with Context API.
-
 Implementing coupon logic with validation.
-
 Ensuring fast and responsive search results.
 
 ## 📜 License
+
 **This project is licensed under the MIT License.**
 
-🙌 Acknowledgements
-**Food images from Pexels**
+## 🙌 Acknowledgements
 
+**Food images from Pexels**
 **UI inspiration from popular food delivery apps**
