@@ -22,7 +22,6 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 - 🔍 **Search Foods** — Quickly find dishes by name.
 - ❤️ **Add to Favorites** — Save your favorite foods for later.
 - 💰 **Apply Discount Coupons** — Enjoy exclusive discounts.
-- 📱 **Responsive UI** — Works on desktop, tablet, and mobile devices.
 - 🗂 **Global State Management** — Powered by Context API.
 - 🌐 **Multi-page Navigation** — Implemented with React Router.
 - ⚡ **Fast Performance** — Built with Vite for lightning-fast builds.
@@ -55,3 +54,34 @@ Built using **React**, **Vite**, **Context API**, and **React Router**.
 ┣ package.json
 ┗ README.md
 ```
+
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/athul457/react-food-app.git
+   cd food-app
+   ```
+2.Install dependencies
+```npm install
+```
+3.Run the development server
+
+```npm run dev
+```
+4.Build for production
+
+```npm run build
+```
+💡 Challenges Faced
+Efficiently managing favorites with Context API.
+
+Implementing coupon logic with validation.
+
+Ensuring fast and responsive search results.
+
+📜 License
+This project is licensed under the MIT License.
