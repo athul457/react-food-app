@@ -1,17 +1,27 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../service/api";
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setloading] = useState(false);
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    localStorage.setItem("user", JSON.stringify({ email, password }));
-    alert("Registered successfully!");
-    navigate("/login");
+    try {
+      setloading(true);
+      const formData = { name, email, password };
+      const { data } = await registerUser(formData);
+      alert(data.message || "registration successfull");
+      navigate("/login");
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setloading(false);
+    }
   };
 
   return (
@@ -53,7 +63,7 @@ export default function Register() {
           type="submit"
           className="w-full bg-orange-400 text-white p-3 rounded-lg hover:bg-orange-600"
         >
-          Register
+          {loading ? "Registering..." : "Register"}
         </button>
 
         <p

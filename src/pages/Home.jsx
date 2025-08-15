@@ -1,23 +1,31 @@
 import { UseCart } from "../context/CartContext";
-import restaurantData from "../data/restaurantData";
 import Offers from "./Offers";
+import { searchData, restaurantData } from "../service/api";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const data = restaurantData;
+  const [data, setdata] = useState([]);
   const { searchItem } = UseCart();
-
-  const filterData = data.filter((item) =>
-    item.resName.toLowerCase().includes(searchItem.toLowerCase())
-  );
+  useEffect(() => {
+    if (searchItem.trim() === "") {
+      restaurantData()
+        .then((res) => setdata(res.data.restaurant))
+        .catch((err) => console.error(err));
+    } else {
+      searchData(searchItem)
+        .then((res) => setdata(res.data.restaurant))
+        .catch((err) => console.log(err));
+    }
+  }, [searchItem]);
 
   return (
     <main>
       <Offers />
 
       <section className="grid grid-cols-5 gap-4 mt-10 bg-white">
-        {filterData.map((data) => (
+        {data.map((data) => (
           <div
-            key={data.id}
+            key={data._id}
             className="mr-2 ml-2 rounded-lg shadow-md shadow-orange-600"
           >
             <List data={data} />
@@ -30,7 +38,7 @@ export default function Home() {
 
 function List({ data }) {
   const { onAddToCart, cart } = UseCart();
-  const isInCart = cart.some((item) => item.id === data.id);
+  const isInCart = cart.some((item) => item._id === data._id);
   return (
     <div className="relative">
       <div className="h-[170px] overflow-hidden">

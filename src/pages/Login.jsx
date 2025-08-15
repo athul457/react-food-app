@@ -1,19 +1,28 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../service/api";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user && user.email === email && user.password === password) {
-      alert("Login successful!");
-      navigate("/dashboard");
-    } else {
-      alert("Invalid credentials!");
+    try {
+      setLoading(true);
+      const formData = { email, password };
+      const { data } = await loginUser(formData);
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
+      alert(data.message || "login successfull");
+      navigate("/home");
+    } catch (err) {
+      alert(err.response?.data?.message || "login failed");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -47,7 +56,7 @@ export default function Login() {
           type="submit"
           className="w-full bg-orange-400 text-white p-3 rounded-lg hover:bg-orange-600"
         >
-          Login
+          {loading ? "Loging..." : "Login"}
         </button>
 
         <p

@@ -1,7 +1,20 @@
-import offersData from "../data/offers";
-import offerImages from "../data/offerImages";
+import { getAllOffers, getAllOfferImages } from "../service/api";
+import { useState, useEffect } from "react";
 
 export default function Offers() {
+  const [getOffers, setOffers] = useState([]);
+  const [getOfferImages, setOfferImages] = useState([]);
+
+  useEffect(() => {
+    getAllOffers()
+      .then((res) => setOffers(res.data.offer))
+      .catch((err) => console.error(err));
+
+    getAllOfferImages()
+      .then((res) => setOfferImages(res.data.offerImage))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <main className=" justify-cente">
       <div className="flex flex-col items-center bg-[url('/images/coverImage.jpg')] bg-cover  opacity-80 w-[98%] ml-4 mt-6 rounded-lg drop-shadow-md shadow-gray-900">
@@ -10,7 +23,7 @@ export default function Offers() {
         </h1>
         <div className="w-full max-w-[800px] overflow-x-auto  p-4 custom-scroll">
           <div className="flex gap-4 mt-8 ">
-            {offersData.map((item) => (
+            {getOffers.map((item) => (
               <div
                 key={item.id}
                 className="flex-shrink-0 w-[200px] hover:scale-110 "
@@ -27,7 +40,7 @@ export default function Offers() {
         </h1>
         <div className="mt-5 bg-gray-100 w-[97%] rounded-lg overflow-x-auto custom-scroll">
           <div className="flex gap-3">
-            {offerImages.map((items) => (
+            {getOfferImages.map((items) => (
               <div
                 key={items.id}
                 className="flex flex-col items-center justify-center w-[110px] h-[150px] bg-white rounded-4xl mb-5 mt-5 p-2 shadow-md shadow-gray-500 overflow-hidden ml-5 flex-shrink-0"
